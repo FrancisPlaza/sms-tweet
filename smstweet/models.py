@@ -11,3 +11,6 @@ class IncomingText(models.Model):
 
     def __unicode__(self):
         return u'(%s) %s' % (self.source, self.msgType)
+    
+    class Meta:
+        ordering = ['-timestamp']
