@@ -1,4 +1,4 @@
 from django.contrib import admin
-from data.models import *
+from smstweet.models import *
 
 admin.site.register(IncomingSMS)
