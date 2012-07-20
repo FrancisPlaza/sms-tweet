@@ -16,12 +16,17 @@
 
 <body>
     <div class="container_12">
-    <h1>SMS Tweet Application using Globe</h1>
-    <ul>
-    {% for t in texts %}
-        <li>{{ t.source }} -- {{ t.msg }} -- {{ t.timestamp }}</li>
-    {% endfor %}
-    </ul>
+        <div class="prefix_3 grid_7 suffix_2 topbanner">
+            <h1>Globe SMS Tweet Application</h1>
+        </div>
+        <div class="prefix_1 grid_11 tweets">
+            <ul>
+            {% for t in texts %}
+            <li>On {{ t.timestamp }}, {{ t.source }} says:
+                <div class="msg">{{ t.msg }}</div></li>
+            {% endfor %}
+            </ul>
+        </div>
     </div>
 </body>
 </html>

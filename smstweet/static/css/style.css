@@ -1,1 +1,26 @@
-body {background: #f8f8f8; font: 13px/1.5 Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;}
+body {
+    background: #f8f8f8;
+    font: 13px/1.5 Helvetica Neue,Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.tweets {
+    margin: 20px 0 10px 0;
+}
+
+.msg {
+    display: block;
+    margin: 10px 0 20px 30px;
+}
+
+.topbanner h1 {
+    font-size: 40px;
+    font-weight: 100;
+    line-height: .9em;
+    margin: 50px 0 8px 0;
+    text-decoration: none;
+    outline: none;
+}
