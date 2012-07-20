@@ -17,7 +17,6 @@ ul {
     margin: 10px 0 20px 30px;
     font-size: 20px;
     font-style: italic;
-    font-family: 'ProximaNovaLight','Helvetica Neue',Arial,Helvetica,sans-serif;
 }
 
 .topbanner h1 {
@@ -27,12 +26,4 @@ ul {
     margin: 50px 0 8px 0;
     text-decoration: none;
     outline: none;
-}
-
-@font-face{
-    font-family:'ProximaNovaLight';
-    src:url('../fonts/ProximaNova-Light.eot');
-    src:url('../fonts/ProximaNova-Light.woff') format('woff'),url('../fonts/ProximaNova-Light.ttf') format('truetype'),url('../fonts/ProximaNova-Light.svg') format('svg');
-    font-weight:400;
-    font-style:normal;
 }
