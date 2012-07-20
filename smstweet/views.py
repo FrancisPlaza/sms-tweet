@@ -1,4 +1,5 @@
 from django.http import HttpResponse, Http404
+from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 from xml.dom import minidom
 from smstweet.models import *
@@ -11,7 +12,6 @@ def updateIncomingText(entry):
                     msg = entry['msg'],
                     udh = entry['udh'])
     new.save()
-    return new.id
 
 @csrf_exempt
 def process(request):
@@ -29,4 +29,8 @@ def process(request):
         else:
             entry[name.nodeValue] = value.nodeValue
     updateIncomingText(entry)
-    return HttpResponse('Success')
+    return HttpResponse()
+
+def show(request):
+    text_list = IncomingText.objects.all()
+    return render_to_response('index.html', {'texts': text_list})

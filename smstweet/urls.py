@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'smstweet.views.home', name='home'),
+    url(r'^$', 'smstweet.views.show', name='home'),
     # url(r'^smstweet/', include('smstweet.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

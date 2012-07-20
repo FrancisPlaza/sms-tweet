@@ -1,0 +1,14 @@
+<!doctype html>
+<head>
+<title>SMS Tweet Application</title>
+</head>
+
+<body>
+    <h1>SMS Tweet Application using Globe</h1>
+    <ul>
+    {% for t in texts %}
+        <li>{{ t.source }} -- {{ t.msg }} -- {{ t.timestamp }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
