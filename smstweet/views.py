@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response
 from django.views.decorators.csrf import csrf_exempt
 from xml.dom import minidom
 from smstweet.models import *
+import datetime
 
 def updateIncomingText(entry):
     new = IncomingText(msgType = entry['messageType'],
@@ -31,6 +32,20 @@ def process(request):
     updateIncomingText(entry)
     return HttpResponse()
 
+@csrf_exempt
+def update(request):
+    '''
+    TODO: update method to return a list of new IncomingText
+    entries given a specified time from POST
+    '''
+    if request.method != 'POST':
+        raise Http404
+    data = request.POST['time']
+    latest = IncomingText.objects.latest('timestamp')
+    return HttpResponse(data)
+
 def show(request):
     text_list = IncomingText.objects.all()
-    return render_to_response('index.html', {'texts': text_list})
+    rendered = int(datetime.datetime.now().strftime('%s'))
+    return render_to_response('index.html', {'texts': text_list,
+            'render': rendered})
