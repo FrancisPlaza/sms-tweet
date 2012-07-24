@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message>
+        <param>
+                <name>messageType</name>
+                <value>SMS</value>
+        </param>
+        <param>
+                <name>id</name>
+                <value>319</value>
+        </param>
+        <param>
+                <name>source</name>
+                <value>09179860039</value>
+        </param>
+        <param>
+                <name>target</name>
+                <value>23737390</value>
+        </param>
+        <param>
+                <name>msg</name>
+                <value>Hello world</value>
+        </param>
+        <param>
+                <name>udh</name>
+                <value></value>
+        </param>
+</message>
