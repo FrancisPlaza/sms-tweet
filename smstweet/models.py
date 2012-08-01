@@ -1,6 +1,6 @@
 from django.db import models
 
-class IncomingText(models.Model):
+class IncomingSMS(models.Model):
     msgType = models.CharField('Message Type', max_length=5)
     msgId = models.CharField('Message ID', max_length=50)
     source = models.CharField('Source', max_length=11)

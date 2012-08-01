@@ -1,4 +1,4 @@
 from django.contrib import admin
 from smstweet.models import *
 
-admin.site.register(IncomingText)
+admin.site.register(IncomingSMS)
